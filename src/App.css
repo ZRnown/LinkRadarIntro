@@ -84,6 +84,9 @@
 .hero-title-wrapper {
   position: relative;
   z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   width: min(760px, 100%);
 }
@@ -106,17 +109,18 @@
   max-width: 100%;
   font-size: clamp(4rem, 11.8vw, 10.5rem);
   line-height: 0.82;
-  margin-bottom: 1rem;
+  margin-bottom: 1.35rem;
   text-shadow: 4px 4px 0 var(--bg), 6px 6px 0 var(--fg);
 }
 
 .hero h2 {
   font-size: clamp(1.6rem, 4vw, 3.1rem);
+  margin-top: 0.55rem;
 }
 
 .hero-copy {
   width: min(600px, 100%);
-  margin: 2rem auto 0;
+  margin: 1.15rem auto 0;
   padding: 0.55rem 0.9rem;
   border: var(--border-thin);
   background: var(--bg);
@@ -153,9 +157,9 @@
 
 .hero-graphic {
   position: relative;
-  width: min(92vw, 760px);
+  width: min(82vw, 560px);
   aspect-ratio: 1;
-  margin: 4rem auto 0;
+  margin: 0 auto;
   z-index: 1;
   isolation: isolate;
 }
@@ -164,7 +168,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 1.35rem;
+  padding: 0.95rem;
   border: var(--border-thick);
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.36), rgba(21, 112, 69, 0.12)),
@@ -200,40 +204,12 @@
   mix-blend-mode: screen;
 }
 
-.radar-header {
-  position: relative;
-  z-index: 3;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-  margin-bottom: 1.1rem;
-}
-
-.radar-status-chip,
-.radar-telemetry-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  padding: 0.55rem 0.7rem;
-  border: 1px solid rgba(21, 112, 69, 0.32);
-  background: rgba(250, 246, 239, 0.52);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-}
-
-.radar-status-chip strong,
-.radar-telemetry-card strong {
-  font-size: 0.88rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .radar-scope-shell {
   position: relative;
   width: min(100%, 540px);
   aspect-ratio: 1;
   margin: 0 auto;
-  padding: 0.85rem;
+  padding: 0.7rem;
   border: 1px solid rgba(21, 112, 69, 0.3);
   background: rgba(242, 234, 225, 0.6);
 }
@@ -316,108 +292,6 @@
   background: radial-gradient(circle, transparent 52%, rgba(0, 0, 0, 0.3) 100%);
 }
 
-.signal-tag {
-  position: absolute;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  transform: translate(-10%, -50%);
-  color: rgba(202, 255, 225, 0.95);
-  text-shadow: 0 0 12px rgba(77, 255, 160, 0.35);
-}
-
-.signal-tag-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #d6ffe8;
-  box-shadow:
-    0 0 8px rgba(151, 255, 198, 0.95),
-    0 0 0 4px rgba(112, 255, 171, 0.18);
-}
-
-.signal-tag small {
-  opacity: 0.74;
-  font-size: 0.58rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.radar-center-readout {
-  position: absolute;
-  left: 50%;
-  bottom: 17%;
-  z-index: 3;
-  padding: 0.3rem 0.55rem;
-  border: 1px solid rgba(150, 255, 199, 0.3);
-  background: rgba(5, 29, 18, 0.54);
-  color: rgba(203, 255, 225, 0.86);
-  transform: translateX(-50%);
-}
-
-.radar-compass {
-  position: absolute;
-  z-index: 3;
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
-  color: rgba(207, 255, 227, 0.84);
-}
-
-.radar-compass-0 {
-  top: 4%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.radar-compass-1 {
-  top: 18%;
-  right: 11%;
-}
-
-.radar-compass-2 {
-  top: 50%;
-  right: 3%;
-  transform: translateY(-50%);
-}
-
-.radar-compass-3 {
-  right: 13%;
-  bottom: 18%;
-}
-
-.radar-compass-4 {
-  bottom: 4%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.radar-compass-5 {
-  bottom: 18%;
-  left: 13%;
-}
-
-.radar-compass-6 {
-  top: 50%;
-  left: 3%;
-  transform: translateY(-50%);
-}
-
-.radar-compass-7 {
-  top: 18%;
-  left: 11%;
-}
-
-.radar-telemetry {
-  position: relative;
-  z-index: 3;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
-  margin-top: 1.1rem;
-}
-
 .badge-float {
   position: absolute;
   z-index: 5;
@@ -428,26 +302,26 @@
 }
 
 .bf-1 {
-  top: 10%;
-  left: 10%;
+  top: 14%;
+  left: 8%;
   transform: rotate(-15deg);
 }
 
 .bf-2 {
-  top: 18%;
-  right: 12%;
+  top: 22%;
+  right: 8%;
   transform: rotate(10deg);
 }
 
 .bf-3 {
   bottom: 17%;
-  left: 12%;
+  left: 10%;
   transform: rotate(5deg);
 }
 
 .bf-4 {
-  right: 11%;
-  bottom: 11%;
+  right: 9%;
+  bottom: 13%;
   transform: rotate(-20deg);
 }
 
@@ -976,11 +850,6 @@ footer {
     padding-top: 7rem;
   }
 
-  .radar-header,
-  .radar-telemetry {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .hero-pill {
     top: 1rem;
     transform: none;
@@ -1047,8 +916,7 @@ footer {
   }
 
   .hero-graphic {
-    width: min(92vw, 520px);
-    margin-top: 3rem;
+    width: min(92vw, 440px);
   }
 
   .badge-float {
@@ -1056,25 +924,7 @@ footer {
   }
 
   .radar-panel {
-    padding: 1rem;
-  }
-
-  .radar-header,
-  .radar-telemetry {
-    gap: 0.5rem;
-  }
-
-  .radar-status-chip,
-  .radar-telemetry-card {
-    padding: 0.45rem 0.55rem;
-  }
-
-  .signal-tag {
-    gap: 0.2rem;
-  }
-
-  .signal-tag small {
-    display: none;
+    padding: 0.8rem;
   }
 
   .card-number {

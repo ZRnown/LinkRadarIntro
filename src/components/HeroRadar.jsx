@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 
-const compassTicks = ['N', '045', '090', '135', 'S', '225', '270', '315']
-
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max)
 }
@@ -28,7 +26,14 @@ function drawRadar(context, width, height, time, targets) {
   context.arc(cx, cy, radius, 0, Math.PI * 2)
   context.clip()
 
-  const scopeGlow = context.createRadialGradient(cx, cy, radius * 0.08, cx, cy, radius)
+  const scopeGlow = context.createRadialGradient(
+    cx,
+    cy,
+    radius * 0.08,
+    cx,
+    cy,
+    radius,
+  )
   scopeGlow.addColorStop(0, 'rgba(34, 190, 106, 0.28)')
   scopeGlow.addColorStop(0.45, 'rgba(8, 55, 30, 0.88)')
   scopeGlow.addColorStop(1, 'rgba(2, 17, 10, 1)')
@@ -131,7 +136,7 @@ function drawRadar(context, width, height, time, targets) {
   context.restore()
 }
 
-export function HeroRadar({ floatingBadges, status, targets, telemetry }) {
+export function HeroRadar({ floatingBadges, targets }) {
   const canvasRef = useRef(null)
 
   useEffect(() => {
@@ -197,15 +202,6 @@ export function HeroRadar({ floatingBadges, status, targets, telemetry }) {
       <div className="radar-panel">
         <div className="radar-panel-sheen" />
 
-        <div className="radar-header">
-          {status.map((item) => (
-            <div className="radar-status-chip" key={item.label}>
-              <span className="mono">{item.label}</span>
-              <strong>{item.value}</strong>
-            </div>
-          ))}
-        </div>
-
         <div className="radar-scope-shell">
           <div className="radar-corner radar-corner-tl" />
           <div className="radar-corner radar-corner-tr" />
@@ -216,42 +212,7 @@ export function HeroRadar({ floatingBadges, status, targets, telemetry }) {
             <canvas className="radar-canvas" ref={canvasRef} />
             <div className="radar-reflection" />
             <div className="radar-vignette" />
-
-            {targets.map((target) => (
-              <div
-                className="signal-tag"
-                key={target.id}
-                style={{
-                  left: `${target.x * 100}%`,
-                  top: `${target.y * 100}%`,
-                }}
-              >
-                <div className="signal-tag-dot" />
-                <span className="mono">{target.label}</span>
-                <small>{target.note}</small>
-              </div>
-            ))}
-
-            <div className="radar-center-readout mono">LK-R / LIVE</div>
-
-            {compassTicks.map((tick, index) => (
-              <span
-                className={`radar-compass radar-compass-${index}`}
-                key={tick}
-              >
-                {tick}
-              </span>
-            ))}
           </div>
-        </div>
-
-        <div className="radar-telemetry">
-          {telemetry.map((item) => (
-            <div className="radar-telemetry-card" key={item.label}>
-              <span className="mono">{item.label}</span>
-              <strong>{item.value}</strong>
-            </div>
-          ))}
         </div>
       </div>
 

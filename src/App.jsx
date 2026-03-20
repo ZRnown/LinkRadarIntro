@@ -7,9 +7,7 @@ import {
   deploymentChecklist,
   floatingBadges,
   marqueeItems,
-  radarStatus,
   radarTargets,
-  radarTelemetry,
   specRows,
   workflowSteps,
 } from './content'
@@ -48,6 +46,7 @@ function App() {
 
           <div className="hero-title-wrapper">
             <h1 className="groovy">LinkRadar</h1>
+            <HeroRadar floatingBadges={floatingBadges} targets={radarTargets} />
             <h2>隐秘而强大的社群引擎</h2>
             <p className="hero-copy mono">
               DISCORD 私有部署商品识别与自动回复系统。
@@ -55,13 +54,6 @@ function App() {
               一次买断，绝对掌控。
             </p>
           </div>
-
-          <HeroRadar
-            floatingBadges={floatingBadges}
-            status={radarStatus}
-            targets={radarTargets}
-            telemetry={radarTelemetry}
-          />
         </section>
 
         <MarqueeStrip items={marqueeItems} />

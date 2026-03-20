@@ -1,28 +1,15 @@
 export const floatingBadges = [
   { text: '以图搜图!', className: 'bf-1' },
   { text: '多账号!', className: 'bf-2' },
-  { text: '拒绝月租!', className: 'bf-3' },
+  { text: '关键词识别!', className: 'bf-3' },
   { text: '完全掌控!', className: 'bf-4' },
 ]
 
 export const radarTargets = [
-  { id: 'a1', label: 'A1', note: 'BAG', x: 0.72, y: 0.28, phase: 0.15 },
-  { id: 'b2', label: 'B2', note: 'WATCH', x: 0.27, y: 0.39, phase: 0.95 },
-  { id: 'c3', label: 'C3', note: 'SHOE', x: 0.64, y: 0.69, phase: 1.75 },
-  { id: 'd4', label: 'D4', note: 'CAP', x: 0.34, y: 0.74, phase: 2.4 },
-]
-
-export const radarTelemetry = [
-  { label: 'SCAN RATE', value: '4.8 SEC' },
-  { label: 'SIGNAL LOCK', value: '94.2%' },
-  { label: 'MATCH GRID', value: '12 LIVE' },
-  { label: 'AUTO REPLY', value: 'ARMED' },
-]
-
-export const radarStatus = [
-  { label: 'TARGET MAP', value: 'LIVE MERCH SCOPE' },
-  { label: 'MODE', value: 'BUYOUT OPS' },
-  { label: 'CHANNELS', value: '24 FEEDS' },
+  { id: 'a1', x: 0.72, y: 0.28, phase: 0.15 },
+  { id: 'b2', x: 0.27, y: 0.39, phase: 0.95 },
+  { id: 'c3', x: 0.64, y: 0.69, phase: 1.75 },
+  { id: 'd4', x: 0.34, y: 0.74, phase: 2.4 },
 ]
 
 export const marqueeItems = [
