@@ -12,4 +12,12 @@ describe('LinkRadar landing page', () => {
     ).toBeInTheDocument()
     expect(screen.getByText(/隐秘而强大的社群引擎/)).toBeInTheDocument()
   })
+
+  it('renders the upgraded radar telemetry hud', () => {
+    render(React.createElement(App))
+
+    expect(screen.getByText(/SCAN RATE/i)).toBeInTheDocument()
+    expect(screen.getByText(/SIGNAL LOCK/i)).toBeInTheDocument()
+    expect(screen.getByText(/TARGET MAP/i)).toBeInTheDocument()
+  })
 })

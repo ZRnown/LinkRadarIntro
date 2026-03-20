@@ -7,6 +7,9 @@ import {
   deploymentChecklist,
   floatingBadges,
   marqueeItems,
+  radarStatus,
+  radarTargets,
+  radarTelemetry,
   specRows,
   workflowSteps,
 } from './content'
@@ -53,7 +56,12 @@ function App() {
             </p>
           </div>
 
-          <HeroRadar floatingBadges={floatingBadges} />
+          <HeroRadar
+            floatingBadges={floatingBadges}
+            status={radarStatus}
+            targets={radarTargets}
+            telemetry={radarTelemetry}
+          />
         </section>
 
         <MarqueeStrip items={marqueeItems} />
