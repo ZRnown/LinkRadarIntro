@@ -1,0 +1,90 @@
+:root {
+  --bg: #f2eae1;
+  --fg: #157045;
+  --fg-bright: #93ffbe;
+  --fg-soft: rgba(21, 112, 69, 0.18);
+  --fg-softer: rgba(21, 112, 69, 0.08);
+  --shadow-deep: rgba(21, 112, 69, 0.28);
+  --border-thick: 3px solid var(--fg);
+  --border-thin: 1px solid var(--fg);
+  --font-groovy: 'Shrikhand', cursive;
+  --font-mono: 'Space Mono', monospace;
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue',
+    'Microsoft Yahei', 'Noto Sans SC', sans-serif;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--fg);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: crosshair;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+  border: 12px solid var(--fg);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image:
+    linear-gradient(rgba(21, 112, 69, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 112, 69, 0.04) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+  opacity: 0.28;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+@media (max-width: 640px) {
+  body {
+    border-width: 8px;
+  }
+}
