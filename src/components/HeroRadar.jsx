@@ -199,21 +199,10 @@ export function HeroRadar({ floatingBadges, targets }) {
 
   return (
     <div className="hero-graphic" role="img" aria-label="实时雷达扫描示意">
-      <div className="radar-panel">
-        <div className="radar-panel-sheen" />
-
-        <div className="radar-scope-shell">
-          <div className="radar-corner radar-corner-tl" />
-          <div className="radar-corner radar-corner-tr" />
-          <div className="radar-corner radar-corner-bl" />
-          <div className="radar-corner radar-corner-br" />
-
-          <div className="radar-scope">
-            <canvas className="radar-canvas" ref={canvasRef} />
-            <div className="radar-reflection" />
-            <div className="radar-vignette" />
-          </div>
-        </div>
+      <div className="radar-scope">
+        <canvas className="radar-canvas" ref={canvasRef} />
+        <div className="radar-reflection" />
+        <div className="radar-vignette" />
       </div>
 
       {floatingBadges.map((badge) => (

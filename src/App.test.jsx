@@ -29,6 +29,7 @@ describe('LinkRadar landing page', () => {
     })
 
     expect(radar).not.toBeNull()
+    expect(container.querySelector('.radar-panel')).toBeNull()
     expect(title.compareDocumentPosition(radar)).toBe(Node.DOCUMENT_POSITION_FOLLOWING)
     expect(radar.compareDocumentPosition(subheading)).toBe(
       Node.DOCUMENT_POSITION_FOLLOWING,
