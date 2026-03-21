@@ -77,12 +77,6 @@ function App() {
               </div>
               <div className="demo-caption">
                 <h3>功能演示视频</h3>
-                <p className="mono">
-                  这里直接展示实际操作录屏，覆盖搜图、商品命中、规则回复和后台控制流程。
-                </p>
-                <p className="mono demo-note">
-                  已转换为网页友好的 MP4，并启用 faststart 以缩短首屏等待。
-                </p>
               </div>
             </div>
           </div>
@@ -190,7 +184,7 @@ function App() {
         <section className="cta-section">
           <h2 className="groovy">INITIATE WORKFLOW</h2>
           <a className="cta-btn" href="#contact">
-            预约演示 / 看功能
+            立即部署
           </a>
           <p className="mono">
             SEARCH. MATCH. REPLY. MONITOR.
