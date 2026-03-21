@@ -30,28 +30,28 @@ function App() {
         <section className="hero">
           <BadgePill className="hero-pill hero-pill-left">
             <>
-              PRIVATE
+              FEATURE
               <br />
-              DEPLOY
+              STACK
             </>
           </BadgePill>
 
           <BadgePill className="hero-pill hero-pill-right">
             <>
-              BUY OUT
+              LIVE
               <br />
-              SYSTEM
+              OPS
             </>
           </BadgePill>
 
           <div className="hero-title-wrapper">
             <h1 className="groovy">LinkRadar</h1>
             <HeroRadar floatingBadges={floatingBadges} targets={radarTargets} />
-            <h2>隐秘而强大的社群引擎</h2>
+            <h2>把 Discord 的搜图、抓取、规则和回复收进一个后台</h2>
             <p className="hero-copy mono">
-              DISCORD 私有部署商品识别与自动回复系统。
+              面向商品运营的识别与自动回复系统。
               <br />
-              一次买断，绝对掌控。
+              以图搜图、店铺同步、账号管理、日志监控一体打通。
             </p>
           </div>
         </section>
@@ -63,14 +63,25 @@ function App() {
             <SectionHeader title="PRODUCT DEMO" label="VIDEO PRESENTATION" />
 
             <div className="demo-stage">
-              <div className="demo-placeholder">
-                <div className="demo-play-icon">▶</div>
-                <h3>系统演示视频</h3>
+              <div className="demo-video-shell">
+                <video
+                  className="demo-video"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster="/linkradar-demo-poster.jpg"
+                >
+                  <source src="/linkradar-demo.mp4" type="video/mp4" />
+                  你的浏览器暂不支持视频播放。
+                </video>
+              </div>
+              <div className="demo-caption">
+                <h3>功能演示视频</h3>
                 <p className="mono">
-                  点击播放，查看完整工作流程：从用户发图到自动识别、匹配商品、自动回复的全过程演示。
+                  这里直接展示实际操作录屏，覆盖搜图、商品命中、规则回复和后台控制流程。
                 </p>
                 <p className="mono demo-note">
-                  [ 视频区域 - 支持 YouTube / 本地视频嵌入 ]
+                  已转换为网页友好的 MP4，并启用 faststart 以缩短首屏等待。
                 </p>
               </div>
             </div>
@@ -89,14 +100,14 @@ function App() {
           </div>
 
           <p className="mono audience-copy">
-            群里有人发图，人工回链接太慢？多账号多规则混乱？
+            群里有人发图，人工回链接太慢？店铺、账号和规则散在几个后台？
             <br />
-            轻量工具扛不住高频查图？你需要工业级引擎。
+            这套系统把搜索、抓取、回复和监控收成一个操作面。
           </p>
         </section>
 
         <section className="container">
-          <SectionHeader title="CORE ARSENAL" label="CAPABILITIES" />
+          <SectionHeader title="FUNCTION STACK" label="CAPABILITIES" />
 
           <div className="grid-2 capability-grid">
             {capabilities.map((capability) => (
@@ -111,8 +122,8 @@ function App() {
 
         <section className="comparison-section">
           <div className="manifesto-box">
-            <h2 className="manifesto-heading-back text-stroke">与其他方案的区别？</h2>
-            <h2 className="manifesto-heading-front">与其他方案的区别？</h2>
+            <h2 className="manifesto-heading-back text-stroke">人工运营怎么比？</h2>
+            <h2 className="manifesto-heading-front">人工运营怎么比？</h2>
 
             <div className="grid-2 comparison-grid">
               {comparisonColumns.map((column) => (
@@ -131,30 +142,30 @@ function App() {
             </div>
 
             <div className="badge-stamp">
-              WE BUILD TOOLS.
+              ONE BACKEND.
               <br />
-              YOU OWN THEM.
+              MANY MODULES.
             </div>
           </div>
 
           <div className="comparison-backdrop groovy text-stroke">
-            CONTROL
+            SEARCH
             <br />
-            YOUR
+            MATCH
             <br />
-            DATA
+            REPLY
           </div>
         </section>
 
         <section className="container deployment-section">
-          <SectionHeader title="DEPLOYMENT" label="SERVER SPECS" />
+          <SectionHeader title="CONTROL SURFACE" label="ADMIN OPERATIONS" />
 
           <div className="grid-2 deployment-grid">
             <div className="deployment-copy">
-              <h3>硬核部署说明</h3>
+              <h3>后台控制台</h3>
               <p>
-                我们提供的是武器，你需要准备自己的阵地。图像识别与多账号并发极其消耗算力，
-                我们不承诺“无限账号”这种营销说法，一切取决于你的硬件。
+                账号、店铺、用户、规则和监控都收拢到一个后台里。你能直接看到运行状态，
+                也能在一个地方调整回复逻辑和运营节奏。
               </p>
 
               <ul className="mono deployment-list">
@@ -165,21 +176,24 @@ function App() {
             </div>
 
             <div>
-              <SpecsTable rows={specRows} />
+              <SpecsTable
+                headers={['模块', '覆盖内容', '价值']}
+                rows={specRows}
+              />
               <p className="mono specs-note">
-                * 实际消耗受群活跃度、发图频率及图片库规模影响。部署前提供专业评估。
+                * 这些模块可以单独使用，也可以按你的运营方式组合起来。
               </p>
             </div>
           </div>
         </section>
 
         <section className="cta-section">
-          <h2 className="groovy">INITIATE SYSTEM</h2>
+          <h2 className="groovy">INITIATE WORKFLOW</h2>
           <a className="cta-btn" href="#contact">
-            预约演示 / 联系部署
+            预约演示 / 看功能
           </a>
           <p className="mono">
-            ONE-TIME FEE. PRIVATE DEPLOYMENT. HARDCORE OPERATORS ONLY.
+            SEARCH. MATCH. REPLY. MONITOR.
           </p>
         </section>
       </main>

@@ -1,13 +1,16 @@
 import React from 'react'
 
-export function SpecsTable({ rows }) {
+export function SpecsTable({
+  headers = ['规模', '账号数参考', '推荐配置'],
+  rows,
+}) {
   return (
     <table className="specs-table">
       <thead>
         <tr>
-          <th>规模</th>
-          <th>账号数参考</th>
-          <th>推荐配置</th>
+          <th>{headers[0]}</th>
+          <th>{headers[1]}</th>
+          <th>{headers[2]}</th>
         </tr>
       </thead>
       <tbody>

@@ -10,7 +10,9 @@ describe('LinkRadar landing page', () => {
     expect(
       screen.getByRole('heading', { name: /LinkRadar/i, level: 1 }),
     ).toBeInTheDocument()
-    expect(screen.getByText(/隐秘而强大的社群引擎/)).toBeInTheDocument()
+    expect(
+      screen.getByText(/把 Discord 的搜图、抓取、规则和回复收进一个后台/),
+    ).toBeInTheDocument()
   })
 
   it('keeps the hero radar clean and positioned between the title and copy', () => {
@@ -24,7 +26,7 @@ describe('LinkRadar landing page', () => {
     const title = screen.getByRole('heading', { name: /LinkRadar/i, level: 1 })
     const radar = container.querySelector('.hero-graphic')
     const subheading = screen.getByRole('heading', {
-      name: /隐秘而强大的社群引擎/,
+      name: /把 Discord 的搜图、抓取、规则和回复收进一个后台/,
       level: 2,
     })
 

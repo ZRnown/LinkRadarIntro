@@ -1,8 +1,8 @@
 export const floatingBadges = [
-  { text: '以图搜图!', className: 'bf-1' },
-  { text: '多账号!', className: 'bf-2' },
+  { text: '相似度检索!', className: 'bf-1' },
+  { text: '账号矩阵!', className: 'bf-2' },
   { text: '关键词识别!', className: 'bf-3' },
-  { text: '完全掌控!', className: 'bf-4' },
+  { text: '实时日志!', className: 'bf-4' },
 ]
 
 export const radarTargets = [
@@ -13,102 +13,121 @@ export const radarTargets = [
 ]
 
 export const marqueeItems = [
-  'NOT A SAAS',
-  'NO MONTHLY FEES',
-  'BRING YOUR OWN SERVER',
-  'BUYOUT DELIVERY',
-  'FULL CONTROL',
-  'PRIVATE DATA',
+  'IMAGE SEARCH',
+  'SHOP SYNC',
+  'RULE ENGINE',
+  'ACCOUNT MATRIX',
+  'LIVE LOGS',
+  'BOT CONTROL',
 ]
 
 export const audiences = [
   'Discord 群主',
-  '代购 / 导购团队',
-  'Affiliate 操盘手',
+  '店铺运营团队',
+  '多账号矩阵团队',
 ]
 
 export const capabilities = [
   {
     id: '01',
-    eyebrow: 'IMAGE RECOGNITION',
-    title: '发图即刻识别',
+    eyebrow: 'IMAGE SEARCH',
+    title: '以图搜图与相似度匹配',
     description:
-      '接入强大的图像处理引擎。用户在群内发图，系统自动抓取、分析、提取特征。支持以图搜图与相似商品高精度匹配，告别人工查图。',
+      '用户在群里发图后，系统自动提取特征并做相似度检索。可按阈值筛选结果，直接命中商品链接或候选商品库，减少人工查图。',
   },
   {
     id: '02',
-    eyebrow: 'MULTI-ACCOUNT',
-    title: '多账号矩阵管理',
+    eyebrow: 'SHOP SYNC',
+    title: '店铺抓取与商品库同步',
     description:
-      '突破单点限制。支持多 Discord 账号并行运作，统一后台调度。不同频道、不同账号可配置独立运行逻辑，满足矩阵化运营需求。',
+      '从店铺和商品入口持续同步内容，维护本地商品库、图片库和外链映射。抓取、索引、更新都能在后台统一处理。',
   },
   {
     id: '03',
-    eyebrow: 'RULE ENGINE',
-    title: '规则驱动回复',
+    eyebrow: 'ACCOUNT MATRIX',
+    title: '账号与店铺权限绑定',
     description:
-      '基于识别结果、关键词、频道属性设置复杂触发规则。自动回复商品链接、文案或特定引导，不同人群和场景可以走不同策略。',
+      '不同用户可绑定不同店铺，管理角色权限和可见范围。管理员能统一维护账号、用户、店铺和可操作模块。',
   },
   {
     id: '04',
-    eyebrow: 'DATA SYNC',
-    title: '商品库与微店抓取',
+    eyebrow: 'RULE ENGINE',
+    title: '关键词、图片和正则回复',
     description:
-      '内建独立商品库管理，支持微店商品数据定向抓取同步。图库与商品链接强绑定，确保搜图结果直接转化为交易链接。',
+      '规则支持关键词、图片相似度、正则和多种触发方式。可以按账号模式切换默认、轮换或关键词策略，回复内容也能灵活配置。',
+  },
+  {
+    id: '05',
+    eyebrow: 'FLOW CONTROL',
+    title: '延迟、冷却与阈值控制',
+    description:
+      '全局回复延迟、图片相似度阈值、关键词冷却和批量节流都能统一配置。适合高频群聊下控制回复密度。',
+  },
+  {
+    id: '06',
+    eyebrow: 'OPS CONSOLE',
+    title: '实时日志与运行监控',
+    description:
+      '提供 bot 启停、实时日志流、系统统计和公告管理。运营状态、抓取进度和错误反馈都能在一个控制台里看见。',
   },
 ]
 
 export const workflowSteps = [
   { step: '1', title: '用户发图', label: 'DISCORD INPUT', tilt: '' },
-  { step: '2', title: '图像识别', label: 'VISION ENGINE', tilt: 'tilt-right' },
-  { step: '3', title: '库内匹配', label: 'MATCHING', tilt: 'tilt-left' },
+  { step: '2', title: '特征提取', label: 'SIMILARITY VECTOR', tilt: 'tilt-right' },
+  { step: '3', title: '规则与店铺匹配', label: 'MATCH ENGINE', tilt: 'tilt-left' },
   { step: '4', title: '自动回复', label: 'AUTO REPLY', tilt: '' },
 ]
 
 export const comparisonColumns = [
   {
-    title: 'SaaS 群发工具',
+    title: '人工群运营',
     variant: 'comparison-card-negative',
     items: [
-      '随时可能封号停服',
-      '按月订阅，成本失控',
-      '数据暴露给第三方',
-      '无商品识别能力',
+      '查图、找链接、回消息都要手工处理',
+      '规则散在表格和群聊里，难以统一维护',
+      '账号、店铺和权限分开管理，容易乱',
+      '看不到实时日志和运行状态',
     ],
   },
   {
-    title: 'LinkRadar 识别引擎',
+    title: 'LinkRadar 后台',
     variant: 'comparison-card-positive',
     items: [
-      '私有部署，永久掌控',
-      '买断制，无订阅费用',
-      '数据完全私有',
-      '专为 Discord 商品识别打造',
+      '以图搜图、店铺抓取、规则回复一套走通',
+      '账号、用户、店铺和角色权限统一管理',
+      '阈值、延迟、轮换和冷却集中配置',
+      '实时日志、统计和公告直接可见',
     ],
   },
 ]
 
 export const deploymentChecklist = [
-  '客户自备独立服务器 (VPS/独服)',
-  '我方工程师提供一次性环境配置与部署',
-  '源代码编译或 Docker 镜像交付',
-  '买断制：部署完成即交付，无后续强制订阅',
+  '账号、店铺和用户可以在一个后台里统一管理',
+  'Bot 启停、日志流和运行状态可以直接查看',
+  '关键词、图片、正则和阈值规则都能配置',
+  '支持管理员与普通用户的权限区分',
 ]
 
 export const specRows = [
   {
-    size: '起步/测试',
-    accounts: '1-3 个',
-    specs: '4核 CPU / 8G 内存',
+    size: '账号矩阵',
+    accounts: '账号 / 用户 / 店铺',
+    specs: '权限绑定与角色管理',
   },
   {
-    size: '中型矩阵',
-    accounts: '5-15 个',
-    specs: '8核 CPU / 16G 内存',
+    size: '商品输入',
+    accounts: '店铺抓取 / 商品库',
+    specs: '图片、链接和外链同步',
   },
   {
-    size: '重度高频',
-    accounts: '20+ 账号',
-    specs: '16核+ / 32G+ / 建议带 GPU 加速图像处理',
+    size: '回复策略',
+    accounts: '关键词 / 图片 / 正则',
+    specs: '默认、轮换、关键词模式',
+  },
+  {
+    size: '运行控制',
+    accounts: '日志 / 统计 / 公告',
+    specs: 'Bot 启停与状态监控',
   },
 ]
