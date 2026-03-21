@@ -672,6 +672,25 @@ main section:not(.hero):not(.comparison-section):not(.cta-section) {
   margin-top: 2rem;
 }
 
+.cta-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 0.65rem 1rem;
+  border: var(--border-thin);
+  background: rgba(21, 112, 69, 0.06);
+}
+
+.cta-contact span {
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  border: var(--border-thin);
+  background: var(--bg);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
 footer {
   padding: 4rem 2rem;
   border-top: var(--border-thick);
@@ -842,5 +861,12 @@ footer {
     width: 100%;
     padding: 1.25rem 1rem;
     font-size: 1.35rem;
+  }
+
+  .cta-contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }

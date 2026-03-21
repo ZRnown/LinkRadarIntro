@@ -186,6 +186,10 @@ function App() {
           <a className="cta-btn" href="#contact">
             立即部署
           </a>
+          <p className="cta-contact mono">
+            CONTACT ON DISCORD
+            <span>zrnown</span>
+          </p>
           <p className="mono">
             SEARCH. MATCH. REPLY. MONITOR.
           </p>
